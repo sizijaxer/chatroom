@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>chat</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/chat.css" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/chat.js"></script>
+</head>
+
+<body class="bg-light">
+    <div id="users" class="col-12 col-b-12">
+        <div id="room_tag">ROOM</div>
+        <div id="login_user" onclick=open_profile()>USER</div>
+        <div id="user_list">
+        </div>
+        <div id="profile" class="modal" >
+            <div id="profile_2" class="modal-content" style="animation:bounceIn 1.2s 1" onclick=profile_bounceIn()>
+              <span class="close" onclick=close_profile()>&times;</span>
+              <div id="user_info">
+                  <i id="i_profile_default" class="fas fa-user"></i>
+                  <h2>Username:<span id="username"></span><i id="i_logout" class="fas fa-sign-out-alt" onclick=logout() title="logout"></i></h2>
+                  <h3>Account:<span id="account"></span></h3>
+              </div>
+            </div>  
+        </div>
+    </div>
+    <div id="post_list" class="col-12 col-b-13"></div>
+    <div class="container col-12 col-b-13">
+        <input type="text" id="comment" class="col-12">
+        <span id="post_btn" type="button"><i id="i_send" class="fa fa-paper-plane"></i></span>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        ///modal crtl
+        var span = document.getElementsByClassName("close")[0];
+        function open_profile() {
+            document.getElementById("profile").style.display = "block";
+        }
+        function close_profile() {
+            document.getElementById("profile").style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("profile")) {
+                document.getElementById("profile").style.display = "none";
+            }
+        }
+        ////
+    </script>
+</body>
+
+</html>

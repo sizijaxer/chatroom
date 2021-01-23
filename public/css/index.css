@@ -1,0 +1,124 @@
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+    }
+}
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+.bounce_in{
+    animation: bounceIn 1.5s 1;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shaking{
+    animation: shake 0.5s 1;
+}
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 3400% 3400%;
+    animation: gradient 15s ease infinite;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+input[type="text"]{
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px;
+    width: 50%;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+input[type="password"]{
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px;
+    width: 50%;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+.modal_button01{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+.modal_button:hover {
+    opacity: 0.8;
+}
+.modal {
+    display: block;
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+  
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 50%; 
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: Verdana, Tahoma, sans-serif;
+}
+.container{
+    padding: 16px;
+    opacity: 0.8;
+}
+
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+#gender_select{
+    display: none;
+}
